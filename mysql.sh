@@ -18,7 +18,7 @@ VALIDATE(){
         echo -e "$2 is $R failure $N"
         exit 1
     else
-        echo "$2 is $G success $N" 
+        echo -e "$2 is $G success $N" 
     fi
 }
 
@@ -54,6 +54,6 @@ then
     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOG_FILE_NAME
     VALIDATE $? "Setting Root Password"
 else
-    echo -e "MySQL Root password already setup ... $Y SKIPPING $N
+    echo -e "MySQL Root password already setup ... $Y SKIPPING $N"
 
 fi
